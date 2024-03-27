@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const key = "4e411b4d7fa2487aa7e53450242603";
@@ -8,7 +7,7 @@ const CardName = () => {
   const [city, setCity] = useState("kathmandu");
   const [data1, setData1] = useState([]);
   const [error, setError] = useState(false);
-  const [weather, setWeather] = useState(false);
+
   useEffect(() => {
     fetchWeatherData();
   }, []);
@@ -22,7 +21,7 @@ const CardName = () => {
       })
       .then((data) => {
         setData1(data);
-        setWeather(true);
+
         setError(false);
       })
       .catch((error) => {
