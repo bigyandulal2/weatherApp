@@ -13,7 +13,7 @@ const CardName = () => {
     fetchWeatherData();
   }, []);
   const fetchWeatherData = () => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch weather data");
